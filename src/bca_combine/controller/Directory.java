@@ -22,6 +22,14 @@ public class Directory {
     private int monitoringTime = 24;
     private ArrayList<String> fileName             = new ArrayList<String>(10);
     private ArrayList<Long> fileSize             = new ArrayList<Long>(10);
+    
+    public String getFileNameFromList(){
+        String text = "Filename yang terdeteksi: \r\n";
+        for(int i=0; i< getFileName().size();i++){
+            text = text + getFileName().get(i) + "\r\n";
+        }
+        return text;
+    }
 
     public void scanPdfFile(String directory) throws IOException{
         //File f = new File("D:\\Permata Billing\\Input\\"); // current directory
